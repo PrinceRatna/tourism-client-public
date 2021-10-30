@@ -1,58 +1,59 @@
 import { getAuth,signOut, signInWithPopup, GoogleAuthProvider , onAuthStateChanged} from "firebase/auth";
 import firebaseInitialization from "../firebase.initialization";
-// import { useLocation,useHistory } from 'react-router-dom';
 import { useEffect, useState } from "react";
 
 firebaseInitialization();
 
 const useFirebase=()=>{
   const [user,setUser]=useState({})
-  // const location=useLocation();
-  // const history=useHistory()
+  const [isLoading,setIsLoading]=useState(true);
+ 
     const auth = getAuth();
     const googleProvider = new GoogleAuthProvider();
     
-  // const redirect_uri=location.state?.from || '/home';
 
   const handleGoogleLogIn=()=>{
-    signInWithPopup(auth, googleProvider)
-    .then((result) => {
-      // console.log(result.user);
-      setUser(result.user);
-
-      // history.push(redirect_uri);
-    })
+    setIsLoading(true);
+   return signInWithPopup(auth, googleProvider)
+    
   }
 
 
   const logOut=()=>{
-
-    signOut(auth).then(() => {
+     setIsLoading(true);
+    signOut(auth)
+    .then(() => {
       // Sign-out successful.
       setUser({});
-    }).catch((error) => {
-      // An error happened.
-    });
+    })
+    .finally(()=>setIsLoading(false));
     
 
   }
   
-
+//observe user state change
   useEffect(()=>{
 
-    onAuthStateChanged(auth, (user) => {
+   const unsubscribed= onAuthStateChanged(auth, (user) => {
       if (user) {
         console.log(user);
         setUser(user);
         
       } 
+      else{
+        setUser({})
+      }
+      setIsLoading(false);
       
     });
+    return ()=>unsubscribed;
 
 },[]);
 
         return{
           user,
+          setIsLoading,
+          isLoading,
           logOut,
          handleGoogleLogIn,
 

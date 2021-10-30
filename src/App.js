@@ -16,6 +16,7 @@ import SignIn from './component/SignIn/SignIn';
 import NotFound from './component/NotFound/NotFound';
 import AuthProvider from './context/AuthProvider';
 import PrivateRoute from './component/PrivateRoute/PrivateRoute'
+import OrderPage from './component/OrderPage/OrderPage';
 function App() {
 
 
@@ -31,9 +32,9 @@ function App() {
           <PrivateRoute  path="/about">
             <About></About>
           </PrivateRoute>
-          <Route path="/users">
-            <Users></Users>
-          </Route>
+          <PrivateRoute path="/order/:id">
+            <OrderPage></OrderPage>
+          </PrivateRoute>
           <Route exact  path="/">
             <Home ></Home>
           </Route>

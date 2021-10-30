@@ -1,9 +1,13 @@
 import React from 'react';
-import { Route,Redirect } from 'react-router';
+import { Route,Redirect, useLocation } from 'react-router';
 import useAuth from '../../hooks/useAuth';
+// import useAuth from '../../hooks/useAuth';
 
 const PrivateRoute = ({children,...rest}) => {
-    const {user}=useAuth();
+    const {user,isLoading}=useAuth();
+    if(isLoading){
+      return <div className="text-red-600 text-xl font-semibold"> Loading.....</div> 
+    }
     return (
         <Route 
         {...rest}
@@ -23,6 +27,8 @@ const PrivateRoute = ({children,...rest}) => {
 
         </Route>
     );
+  
+
 };
 
 export default PrivateRoute;
