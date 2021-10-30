@@ -6,6 +6,16 @@ firebaseInitialization();
 
 const useFirebase=()=>{
   const [user,setUser]=useState({})
+  const[order,setOrder]=useState({});
+
+  const myFunction=()=>{
+
+   return  order.title=order?.title+''
+
+  }
+  
+  
+
   const [isLoading,setIsLoading]=useState(true);
  
     const auth = getAuth();
@@ -36,7 +46,7 @@ const useFirebase=()=>{
 
    const unsubscribed= onAuthStateChanged(auth, (user) => {
       if (user) {
-        console.log(user);
+        // console.log(user);
         setUser(user);
         
       } 
@@ -54,7 +64,10 @@ const useFirebase=()=>{
           user,
           setIsLoading,
           isLoading,
+          order,
+          setOrder,
           logOut,
+          myFunction,
          handleGoogleLogIn,
 
       

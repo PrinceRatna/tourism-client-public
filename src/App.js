@@ -17,6 +17,10 @@ import NotFound from './component/NotFound/NotFound';
 import AuthProvider from './context/AuthProvider';
 import PrivateRoute from './component/PrivateRoute/PrivateRoute'
 import OrderPage from './component/OrderPage/OrderPage';
+import MyOrder from './component/MyOrders/MyOrder';
+import ManageAllOrder from './component/ManageAllOrders/ManageAllOrder';
+import AddService from './component/AddService/AddService';
+import UpdateOrder from './component/UpdateOrder/UpdateOrder';
 function App() {
 
 
@@ -29,19 +33,40 @@ function App() {
           <Route path="/home">
             <Home></Home>
           </Route>
-          <PrivateRoute  path="/about">
+          {/* <PrivateRoute  path="/about">
             <About></About>
-          </PrivateRoute>
-          <PrivateRoute path="/order/:id">
+          </PrivateRoute> */}
+         
+         <Route exact path="/myOrders">
+           <MyOrder></MyOrder>
+           </Route>
+         <Route  path="/manageAllOrders">
+           <ManageAllOrder></ManageAllOrder>
+           </Route>
+           <Route  path="/addService">
+             <AddService></AddService>
+           </Route>
+
+
+          <PrivateRoute  path="/order/:id">
             <OrderPage></OrderPage>
           </PrivateRoute>
-          <Route exact  path="/">
-            <Home ></Home>
-          </Route>
           <Route path="/sign">
             <SignIn></SignIn>
           </Route>
+           
+          <Route  path='/addOrders/update/:id'>
+               <UpdateOrder></UpdateOrder>
+            </Route>
 
+
+
+          <Route   path="/">
+            <Home ></Home>
+          </Route>
+          
+          {/* /addOrders/update/ */}
+         
           <Route path="*">
             <NotFound></NotFound>
 
