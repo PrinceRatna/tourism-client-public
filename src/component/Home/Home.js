@@ -16,7 +16,7 @@ const Home = () => {
 
   //services useEffect
   useEffect(()=>{
-    fetch('http://localhost:5000/services')
+    fetch('https://chilling-castle-57731.herokuapp.com/services')
     .then(res=>res.json())
     .then(data=>setServices(data))
   },[]);
@@ -24,7 +24,7 @@ const Home = () => {
   //popular place useEffect
 
   useEffect(()=>{
-    fetch('http://localhost:5000/places')
+    fetch('https://chilling-castle-57731.herokuapp.com/places')
     .then(res=>res.json())
     .then(data=>setPlaces(data))
   },[]);

@@ -18,7 +18,7 @@ const OrderPage = () => {
     const {id}=useParams();
     // const[order,setOrder]=useState({});
     useEffect(()=>{
-        const url=`http://localhost:5000/services/${id}`
+        const url=`https://chilling-castle-57731.herokuapp.com/services/${id}`
         fetch(url)
         .then(res=>res.json())
         .then(data=>setOrder(data))
@@ -43,7 +43,7 @@ const OrderPage = () => {
         const address=addressRef.current.value;
         const newUser={name,phone,address,description,title};
          
-      fetch('http://localhost:5000/addOrders',{
+      fetch('https://chilling-castle-57731.herokuapp.com/addOrders',{
        method:'POST',
        headers:{
            'content-type':'application/json'

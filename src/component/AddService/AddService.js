@@ -18,7 +18,7 @@ const AddService = () => {
         const newHomeUser={title,price,imgUrl,description};
 
 
-        fetch('http://localhost:5000/services',{
+        fetch('https://chilling-castle-57731.herokuapp.com/services',{
             method:'POST',
             headers:{
                 'content-type':'application/json'

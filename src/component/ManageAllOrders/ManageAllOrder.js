@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const ManageAllOrder = () => {
     const [allOrders,setAllOrders]=useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/addOrders')
+        fetch('https://chilling-castle-57731.herokuapp.com/addOrders')
         .then(res=>res.json())
         .then(data=>setAllOrders(data));
     },[]);
@@ -13,7 +13,7 @@ const ManageAllOrder = () => {
  const handleDeleteOder=id=>{
  const proceed=window.confirm('Are you sure, you want to delete?');
  if(proceed){
-    const url=`http://localhost:5000/addOrders/${id}`;
+    const url=`https://chilling-castle-57731.herokuapp.com/addOrders/${id}`;
     fetch(url,{
         method:'DELETE'
     })

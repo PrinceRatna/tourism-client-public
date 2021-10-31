@@ -7,7 +7,7 @@ const UpdateOrder = () => {
     const {id}=useParams();
     const [allOrder,setAllOrder]=useState({});
 useEffect(()=>{
-    const url=`http://localhost:5000/addOrders/${id}`;
+    const url=`https://chilling-castle-57731.herokuapp.com/addOrders/${id}`;
 fetch(url)
 .then(res=>res.json())
 .then(data=>setAllOrder(data))
@@ -67,8 +67,8 @@ const handleTitleChange=e=>{
 
 
 const handleUpdateOrder=e=>{
-    // http://localhost:5000/addOrders?617d9e65ca45b5f283197a28
-    const url=`http://localhost:5000/addOrders/${id}`;
+
+    const url=`https://chilling-castle-57731.herokuapp.com/addOrders/${id}`;
     fetch(url,{
         method:'PUT',
         headers:{
