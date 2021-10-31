@@ -1,9 +1,9 @@
 // import userEvent from '@testing-library/user-event';
 import React, { useEffect, useState } from 'react';
 import useAuth from '../../hooks/useAuth';
-import baner1 from '../../images/h-1.jpg';
-import baner2 from '../../images/h-2.jpg';
-import baner3 from '../../images/h-3.jpg';
+import baner1 from '../../images/p-2.jpg';
+import baner2 from '../../images/p-1.jpg';
+import baner3 from '../../images/p-3.jpg';
 import PopularPlace from '../PopularPlace/PopularPlace';
 import Services from '../Services/Services';
 import './Home.css'
@@ -68,7 +68,7 @@ const Home = () => {
       
           {/* <!--Slide 3--> */}
           <input className="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden=""/>
-          <div className="carousel-item absolute opacity-0" style={{height:"500px", backgroundImage:`url(${baner3})`}}>
+          <div className="carousel-item absolute opacity-0" style={{height:"500px",backgroundImage:`url(${baner3})`}}>
           </div>
           <label htmlFor="carousel-2"
             className="control-3 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto"><i

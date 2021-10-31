@@ -2,6 +2,7 @@ import React from 'react';
 
 const PopularPlace = (props) => {
     const {title,price,url}=props.place;
+    console.log(url)
     return (
         <div className="border-solid border-2 ">
         <img  className="w-full md:w-96 h-80" src={url} alt=""/>
