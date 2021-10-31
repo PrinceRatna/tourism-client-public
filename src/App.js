@@ -7,9 +7,9 @@ import {
   Route,
 
 } from "react-router-dom";
-import About from './component/About/About';
+// import About from './component/About/About';
 import Header from './component/Header/Header';
-import Users from './component/Users/Users';
+// import Users from './component/Users/Users';
 import Home from './component/Home/Home';
 import Footer from './component/Footer/Footer';
 import SignIn from './component/SignIn/SignIn';
@@ -33,9 +33,7 @@ function App() {
           <Route path="/home">
             <Home></Home>
           </Route>
-          {/* <PrivateRoute  path="/about">
-            <About></About>
-          </PrivateRoute> */}
+          
          
          <Route exact path="/myOrders">
            <MyOrder></MyOrder>
@@ -65,7 +63,6 @@ function App() {
             <Home ></Home>
           </Route>
           
-          {/* /addOrders/update/ */}
          
           <Route path="*">
             <NotFound></NotFound>

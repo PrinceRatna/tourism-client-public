@@ -95,9 +95,7 @@ const Home = () => {
       
         </div>
       </div>
-      {/* <div className="absolute text-white text-3xl block font-bold top-48 left-48">
-          Travel To Beautiful Place
-      </div> */}
+      
             <h2 className="text-center text-3xl font-bold mt-10 mb-5"> The  Services Of Our Tour</h2>
 
       <section className="grid grid-cols-1 md:grid-cols-3 gap-4 my-10 ">

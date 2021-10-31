@@ -1,3 +1,38 @@
+
+# TOUTISTA WEBSITE
+
+Live website link : h [Create React App](https://github.com/facebook/create-react-app)
+
+## Available Things:
+Route, React ,Javascript,Firebase Authentication,Firebase Hosting,Node ,Mongodb .
+
+## Website Purpose:
+It helps people to know all services that are available in this website. It may make a easy  life for a tourist to help on the variouus things.
+
+## Hooks
+useState,useRef and useEffect also used in this website.
+
+ ## Context Api was used.
+password login and google sign in is available in this site.
+Firebase Hosting ...
+
+## we aslo use redirect and private  route. And fixed reload login problem.
+
+
+
+
+
+
+
+
+
+//////////////////////////////////////////
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

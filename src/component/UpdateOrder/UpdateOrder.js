@@ -7,7 +7,6 @@ const UpdateOrder = () => {
     const {id}=useParams();
     const [allOrder,setAllOrder]=useState({});
 useEffect(()=>{
-    // http://localhost:5000/addOrders?617d9e65ca45b5f283197a28
     const url=`http://localhost:5000/addOrders/${id}`;
 fetch(url)
 .then(res=>res.json())
@@ -89,12 +88,12 @@ const handleUpdateOrder=e=>{
 }
 
     return (
-        <div>
+        <div >
             <form onSubmit={handleUpdateOrder}>
-                <input type="text"onChange={handleTitleChange} value={allOrder.title||''} className="border-2 rounded px-4 w-11/12 md:w-96 h-12 border-green-500  focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"/>
-                <input type="text"onChange={handleNameChange} value={allOrder.name||''} className="border-2 rounded px-4 w-11/12 md:w-96 h-12 border-green-500  focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"/>
-                <input type="text"onChange={handlePhoneChange} value={allOrder.phone||''} className="border-2 rounded px-4 w-11/12 md:w-96 h-12 border-green-500  focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"/>
-                <input type="text"onChange={handleAddressChange} value={allOrder.address||''} className="border-2 rounded px-4 w-11/12 md:w-96 h-12 border-green-500  focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"/>
+                <input type="text"onChange={handleTitleChange} value={allOrder.title||''} className="  my-5  border-2 rounded px-4 w-11/12 md:w-96 h-12 border-green-500  focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"/><br/>
+                <input type="text"onChange={handleNameChange} value={allOrder.name||''} className="    my-5  border-2 rounded px-4 w-11/12 md:w-96 h-12 border-green-500  focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"/><br/>
+                <input type="text"onChange={handlePhoneChange} value={allOrder.phone||''} className="  my-5  border-2 rounded px-4 w-11/12 md:w-96 h-12 border-green-500  focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"/><br/>
+                <input type="text"onChange={handleAddressChange} value={allOrder.address||''} className="my-5  border-2 rounded px-4 w-11/12 md:w-96 h-12 border-green-500  focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"/><br/>
                 <input type="submit" value="Submit" className=" bg-purple-500 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50 mb-2 h-8 pl-2 pr-2 text-white font-medium text-base rounded"/>
             </form>
             

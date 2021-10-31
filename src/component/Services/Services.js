@@ -10,7 +10,7 @@ const Services = (props) => {
    
 
 
-    // border-4
+
     return (
         <div className="border-solid border-2 ">
             <img  className="w-full md:w-96 h-80" src={url} alt=""/>

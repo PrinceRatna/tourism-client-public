@@ -25,19 +25,7 @@ const OrderPage = () => {
     },[]) 
 
 
-    //   fetch('http://localhost:5000/addOrders',{
-    //     method:'POST',
-    //     headers:{
-    //         'content-type':'application/json'
-    //     },
-    //     body: JSON.stringify(order)
-    // })
-    // .then(res=>res.json())
-    // .then(data=>{
-    //     if(data.insertedId){
-    //         alert('Successfully booking completed.')
-    //     }
-    // });
+    
 
     
 
