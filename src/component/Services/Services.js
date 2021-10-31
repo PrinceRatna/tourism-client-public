@@ -36,7 +36,7 @@ const Services = (props) => {
         <div className="border-solid border-2 ">
             <img  className="w-full md:w-96 h-80" src={url} alt=""/>
             <h2 className="font-semibold text-xl md:text-2xl  inline-block">Service Name:{title}</h2>
-            <h4 className="font-semibold text-lg md:text-xl my-2 ">From : {price}</h4>
+            <h4 className="font-semibold text-lg md:text-xl my-2 ">From $ : {price}</h4>
             <p><span className="text-lg font-medium">Description : </span> <span> {description}</span></p>
             <NavLink to={`/order/${_id}`}><button  className="mt-3 bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50 w-52 h-10 text-white font-semibold text-xl rounded">Booking</button></NavLink>
 

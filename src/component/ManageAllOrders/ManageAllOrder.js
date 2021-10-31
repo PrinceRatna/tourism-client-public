@@ -30,9 +30,6 @@ const ManageAllOrder = () => {
 
  }
     
-
-
-
     return (
         <div>
             <ul>

@@ -1,4 +1,4 @@
-import userEvent from '@testing-library/user-event';
+// import userEvent from '@testing-library/user-event';
 import React, { useEffect, useState } from 'react';
 import baner1 from '../../images/h-1.jpg';
 import baner2 from '../../images/h-2.jpg';
