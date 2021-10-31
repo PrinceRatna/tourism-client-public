@@ -14,8 +14,8 @@ const Footer = () => {
          <div>
              <h1 className="font-semibold">CONTACT US</h1>
              <hr/>
-             <span className="inline-block mr-5 mt-5">{element2}  princeratna125@gmail.com</span><br/>
-            <span className="inline-block mr-5 mt-5">{element3} AZimpur,1243 Clony</span><br/>
+             <span className="inline-block mr-5 mt-5">{element2}  tourista@gmail.com</span><br/>
+            <span className="inline-block mr-5 mt-5">{element3} Azimpur,1243 Clony</span><br/>
              <span className="inline-block mr-5 mt-5">{element1} 017712155</span><br/>
             <span className="inline-block mr-5 mt-5">{element4 }   </span>
             <span className="inline-block mr-5 mt-5">{element5}</span>
@@ -31,13 +31,13 @@ const Footer = () => {
              <a className="mt-5 inline-block" href="https://www.youtube.com/watch?v=_4qQQMKvkMI">https://www.youtube.4qQQMKvkMI</a>
          </div>
          <div>
-             <h1 className="font-semibold">LATEST COURSES</h1>
+             <h1 className="font-semibold">LATEST SERVICES</h1>
              <hr/>
              <ul>
-                 <li>Physics</li>
-                 <li>Chemistry</li>
-                 <li>Mathematics</li>
-                 <li>Biology</li>
+                 <li>PLAN TICKET BOOKING</li>
+                 <li>BUS BOOKING</li>
+                 <li>TOURIST GUIDLE</li>
+                 <li>BUS TICKET BOOKING</li>
              </ul>
             </div>
         </footer>

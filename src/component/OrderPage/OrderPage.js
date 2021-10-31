@@ -83,10 +83,14 @@ const OrderPage = () => {
     //   console.log(user)
     return (
         <div>
+
+            <div className="border-2  border-green-500 mx-auto w-11/12 my-5  p-2">
+                <h2 className="text-red-600 text-xl font-semibold">Log In User Name : {user.displayName}</h2>
+                <h2 className="font-medium"><span className=" text-xl font-semibold">Email :</span> {user.email}</h2>
+                 <p className="font-medium"> <span className=" text-xl font-semibold">Description :</span> {order.description}</p> 
+            </div>
             
-                <h2>{user.displayName}</h2>
-                <h2>{user.email}</h2>
-                <p>{order.description}</p> 
+              
 
                 <form onSubmit={handleAddUser} >
                 < input type="text"    ref={nameRef}   className="border-2 rounded px-4 w-11/12 md:w-96 h-12 border-green-500  focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Enter Name" required/><br/> <br/>

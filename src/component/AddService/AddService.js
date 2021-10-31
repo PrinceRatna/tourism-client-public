@@ -42,7 +42,7 @@ const AddService = () => {
 
     return (
         <div>
-            <h2>Add New A New Service </h2>
+            <h2 className="text-xl font-semibold my-5">Add New A New Service </h2>
 
             <form onSubmit={handleAddHomeUser} >
                 < input type="text"    ref={titleRef}   className="border-2 rounded px-4 w-11/12 md:w-96 h-12 border-green-500  focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Write Service Title" required/><br/> <br/>

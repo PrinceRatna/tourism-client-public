@@ -1,5 +1,6 @@
 // import userEvent from '@testing-library/user-event';
 import React, { useEffect, useState } from 'react';
+import useAuth from '../../hooks/useAuth';
 import baner1 from '../../images/h-1.jpg';
 import baner2 from '../../images/h-2.jpg';
 import baner3 from '../../images/h-3.jpg';
@@ -7,8 +8,11 @@ import PopularPlace from '../PopularPlace/PopularPlace';
 import Services from '../Services/Services';
 import './Home.css'
 const Home = () => {
+  const{isLoading}=useAuth();
   const[services,setServices]=useState([]);
   const[places,setPlaces]=useState([]);
+
+ 
 
   //services useEffect
   useEffect(()=>{
@@ -24,6 +28,13 @@ const Home = () => {
     .then(res=>res.json())
     .then(data=>setPlaces(data))
   },[]);
+ 
+    //loading home page
+
+
+  if(isLoading){
+    return <div className="my-5 text-red-600 text-xl font-semibold"> Loading.....</div> 
+  }
 
     return (
         <div>
