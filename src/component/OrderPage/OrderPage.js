@@ -36,12 +36,14 @@ const OrderPage = () => {
        
       const handleAddUser=(e)=>{
            
+        const email=user.email;
+
         const description=order.description;
         const title=order.title;
         const name=nameRef.current.value;
         const phone=phoneRef.current.value;
         const address=addressRef.current.value;
-        const newUser={name,phone,address,description,title};
+        const newUser={name,phone,address,description,title,email};
          
       fetch('https://chilling-castle-57731.herokuapp.com/addOrders',{
        method:'POST',
