@@ -7,7 +7,7 @@ const UpdateOrder = () => {
     const {id}=useParams();
     const [allOrder,setAllOrder]=useState({});
 useEffect(()=>{
-    const url=`https://chilling-castle-57731.herokuapp.com/addOrders/${id}`;
+    const url=`https://polar-beach-07938.herokuapp.com/addOrders/${id}`;
 fetch(url)
 .then(res=>res.json())
 .then(data=>setAllOrder(data))
@@ -68,7 +68,7 @@ const handleTitleChange=e=>{
 
 const handleUpdateOrder=e=>{
 
-    const url=`https://chilling-castle-57731.herokuapp.com/addOrders/${id}`;
+    const url=`https://polar-beach-07938.herokuapp.com/addOrders/${id}`;
     fetch(url,{
         method:'PUT',
         headers:{

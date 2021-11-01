@@ -8,7 +8,7 @@ const Services = (props) => {
 
     const{title,url,price,description,_id}=props.service;
    
-
+     console.log(props.service)
 
 
     return (

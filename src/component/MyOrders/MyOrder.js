@@ -8,8 +8,9 @@ const MyOrder = () => {
     const {user}=useAuth();
     const [orders,setOrders]=useState([]);
     useEffect(()=>{
-        fetch(`https://chilling-castle-57731.herokuapp.com/addOrders?email=${user.email}`)
+        fetch(`https://polar-beach-07938.herokuapp.com/addOrders?email=${user.email}`)
         // fetch(`http://localhost:5000/myOrders?email=${user.email}`)
+        // http://localhost:5000/addOrders?email=arjnry125@gmail.com
         .then(res=>res.json())
         .then(data=>setOrders(data));
     },[]);
@@ -18,7 +19,7 @@ const MyOrder = () => {
     const handleDeleteOder=id=>{
         const proceed=window.confirm('Are you sure, you want to delete?');
         if(proceed){
-           const url=`https://chilling-castle-57731.herokuapp.com/addOrders/${id}`;
+           const url=`https://polar-beach-07938.herokuapp.com/addOrders/${id}`;
            fetch(url,{
                method:'DELETE'
            })
@@ -38,6 +39,7 @@ const MyOrder = () => {
 
     return (
         <div>
+            
             <ul>
            {
                orders.map(order=><li

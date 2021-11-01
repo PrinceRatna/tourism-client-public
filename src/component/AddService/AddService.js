@@ -18,7 +18,7 @@ const AddService = () => {
         const newHomeUser={title,price,imgUrl,description};
 
 
-        fetch('https://chilling-castle-57731.herokuapp.com/services',{
+        fetch('https://polar-beach-07938.herokuapp.com/services',{
             method:'POST',
             headers:{
                 'content-type':'application/json'
