@@ -35,15 +35,15 @@ function App() {
           </Route>
           
          
-         <Route exact path="/myOrders">
+         <PrivateRoute exact path="/myOrders">
            <MyOrder></MyOrder>
-           </Route>
-         <Route  path="/manageAllOrders">
+           </PrivateRoute>
+         <PrivateRoute  path="/manageAllOrders">
            <ManageAllOrder></ManageAllOrder>
-           </Route>
-           <Route  path="/addService">
+           </PrivateRoute>
+           <PrivateRoute  path="/addService">
              <AddService></AddService>
-           </Route>
+           </PrivateRoute>
 
 
           <PrivateRoute  path="/order/:id">
@@ -53,9 +53,9 @@ function App() {
             <SignIn></SignIn>
           </Route>
            
-          <Route  path='/addOrders/update/:id'>
+          <PrivateRoute   path='/addOrders/update/:id'>
                <UpdateOrder></UpdateOrder>
-            </Route>
+            </PrivateRoute>
 
 
 
